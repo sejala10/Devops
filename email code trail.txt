@@ -1,0 +1,61 @@
+import smtplib
+'''
+gmail_user = 'ambati.yukthasejal@kasmo.co'
+gmail_password = 'Omg^2023'
+
+sent_from = gmail_user
+to = ['swaraj.jaiswal@kasmo.co', 'chakri@kasmo.co']
+subject = 'trying to send the email through python code'
+body = 'practice'
+
+email_text ="""\
+From:%s ambati.yukthasejal@kasmo.co
+To: %s swaraj.jaiswal@kasmo.co,chakri@kasmo.co
+Subject: %s 
+
+%s
+"""% (sent_from, ", ".join(to), subject, body)
+
+try:
+    smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+    smtp_server.ehlo()
+    smtp_server.login(gmail_user, gmail_password)
+    smtp_server.sendmail(sent_from, to, email_text)
+    smtp_server.close()
+    print ("Email sent successfully!")
+except Exception as ex:
+    print ("Something went wrong….",ex)
+
+'''
+------------------------------------------------------------------
+'''
+#show to send emails easily using python -
+sender_email = "ambati.yukthasejal@kasmo.co"
+rec_email = "swaraj.jaiswal@kasmo.co"
+password = input (str ("Please enter your password :") )
+message = "Hey, this was sent using python"
+server = smtplib. SMTP ('smtp kasmo.co', 587)
+server.starttls ()
+server.login (sender_email, password)
+print ("Login \ success")
+server.sendmail (sender_email, rec_email, message)
+print ("Email has been sent to ", rec_email)
+
+'''
+-------------------------------------------------------------------
+'''import smtplib'''
+                        
+server = smtplib. SMTP('smtp. gmail. com',587)
+server.starttls()
+server,login('sejuambati@gmail.com' , 'sejal#2000')
+
+'''server.com', *just$for$fun*'''
+server.sendmail( 'sejuambati@gmail.com', 'ambati.yuktha@btech.christuniversity.in', 'Mail sent from рython code')
+print('Mail sent')
+-------------------------------------------------------------------
+import smtplib
+server = smtplib.SMTP('smtp.gmail.com',587)
+server.starttls()
+server.login('sejuambati@gmail.com', 'sejal#2000')
+server.sendmail('sejuambati@gmail.com','mchandanreddy973@gmail.com','mail sent from python code')
+print('mail sent')

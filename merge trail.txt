@@ -1,0 +1,42 @@
+"""
+import sys
+import re
+import itertools,requests
+import smtplib
+from email.message import EmailMessage
+import pywhatkit
+import datetime
+def func_for_file1():
+    # All of the code from File 1 goes here.
+    def email_alert(subject, body, to):
+        msg = EmailMessage() 
+        msg.set_content(body)
+        msg['subject'] = subject
+        msg['to'] = to
+        
+        user = "sejuambati@gmail.com"
+        msg['from'] = user
+        password = "fdglpnshncmnqntv"
+        
+        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server.starttls()
+        server.login(user, password)
+        server.send_message(msg)
+        server.quit()
+if __name__ == '__main__':     #to only run the code inside the if statement when the program is run directly by the Python interpreter. 
+    email_alert("hey-subject", "hello,"
+					   "have a wonderful wednesday!-", "Ppatukurianjali@gmail.com")
+
+def func_for_file2():
+    # ALl of the code from File 2 goes here.
+    x = datetime.datetime(2023, 5, 10)
+    pywhatkit.sendwhatmsg("+917277745999", "hii", 11, 29)
+
+def main():
+   # Decide what order you want to call these methods.
+   func_for_file1()
+   func_for_file2()
+
+if __name__ == '__main__':
+   main()
+   """
