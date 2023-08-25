@@ -1,5 +1,5 @@
-create database test456;
-create schema devops;
+create database test4567;
+create schema devops11;
 CREATE TABLE user_details (
   user_id number, 
   username varchar(255), 
